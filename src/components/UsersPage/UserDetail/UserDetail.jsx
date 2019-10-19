@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProfilePage.scss'
+import './UserDetail.scss';
 import {Dropdown} from "semantic-ui-react";
 
 const ROLE_OPTIONS = [
@@ -15,19 +15,6 @@ const ROLE_OPTIONS = [
   },
 ];
 
-const TIMEZONE_OPTIONS = [
-  {
-    key: 'Россия, Москва',
-    text: 'Россия, Москва',
-    value: 'Россия, Москва',
-  },
-  {
-    key: 'Россия, Владивосток',
-    text: 'Россия, Владивосток',
-    value: 'Россия, Владивосток',
-  },
-];
-
 const ADDRESS_OPTIONS = [
   {
     key: '0xF76d0e464B59EfEa4861dEb2ca57aEabF2d6B756',
@@ -40,7 +27,8 @@ const ADDRESS_OPTIONS = [
     value: '0x71Dc5c85D8f7128459b1e146A9CfFdD7999A9e3F',
   },
 ];
-function ProfilePage() {
+
+function UserDetail() {
   return (
     <div className='page-content'>
       <h1>Профиль пользователя</h1>
@@ -81,16 +69,41 @@ function ProfilePage() {
         </div>
         <div className='app-input'>
           <label>Часовой пояс</label>
-          <Dropdown
-            placeholder='Часовой пояс'
-            fluid
-            className="small-input app-dropdown-button"
-            selection
-            options={TIMEZONE_OPTIONS}
-          />
+          <input value='тут должен быть дропдаун'/>
         </div>
       </div>
-      
+
+      <h2>Платёжные реквизиты</h2>
+      <div className='app-input-group'>
+        <div className='app-input wide-input'>
+          <label>Наименование плательщика</label>
+          <input value='ОАО «Сетевая компания»'/>
+        </div>
+        <div className='app-input medium-input'>
+          <label>Расчётный счёт</label>
+          <input value='40702810500000000072'/>
+        </div>
+        <div className='app-input wide-input'>
+          <label>Наименование банка</label>
+          <input value='ООО Банк «Аверс»'/>
+        </div>
+        <div className='app-input tiny-input'>
+          <label>БИК</label>
+          <input value='049205774'/>
+        </div>
+        <div className='app-input small-input'>
+          <label>Корреспондентский счет</label>
+          <input value='30101810500000000774'/>
+        </div>
+        <div className='app-input tiny-input'>
+          <label>ИНН</label>
+          <input value='1653003601'/>
+        </div>
+        <div className='app-input tiny-input'>
+          <label>КПП</label>
+          <input value='165501001'/>
+        </div>
+      </div>
       <div className='app-button-group'>
         <button className='primary-button'>Сохранить изменения</button>
         <button className='secondary-button'>Отменить</button>
@@ -99,4 +112,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default UserDetail;
