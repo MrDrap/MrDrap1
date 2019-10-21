@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/MrDrap1/static/css/main.07b20fda.chunk.css",
+    "main.js": "/MrDrap1/static/js/main.a275c5d7.chunk.js",
+    "main.js.map": "/MrDrap1/static/js/main.a275c5d7.chunk.js.map",
+    "runtime-main.js": "/MrDrap1/static/js/runtime-main.d5c608c8.js",
+    "runtime-main.js.map": "/MrDrap1/static/js/runtime-main.d5c608c8.js.map",
+    "static/js/2.15caad57.chunk.js": "/MrDrap1/static/js/2.15caad57.chunk.js",
+    "static/js/2.15caad57.chunk.js.map": "/MrDrap1/static/js/2.15caad57.chunk.js.map",
+    "index.html": "/MrDrap1/index.html",
+    "precache-manifest.1ead4c53582b21f2c905bc91a45978ac.js": "/MrDrap1/precache-manifest.1ead4c53582b21f2c905bc91a45978ac.js",
+    "service-worker.js": "/MrDrap1/service-worker.js",
+    "static/css/main.07b20fda.chunk.css.map": "/MrDrap1/static/css/main.07b20fda.chunk.css.map",
+    "static/media/arrow-icon.svg": "/MrDrap1/static/media/arrow-icon.9ff07dc1.svg",
+    "static/media/logo.svg": "/MrDrap1/static/media/logo.8ac90c27.svg",
+    "static/media/unfold-icon.svg": "/MrDrap1/static/media/unfold-icon.aa3be005.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5c608c8.js",
+    "static/js/2.15caad57.chunk.js",
+    "static/css/main.07b20fda.chunk.css",
+    "static/js/main.a275c5d7.chunk.js"
+  ]
+}
