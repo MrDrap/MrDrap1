@@ -1,0 +1,21 @@
+// h1 {
+//   margin: 24px 0 24px 24px !important;
+// }
+
+.modal-cross {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.input-and-buttons {
+  padding-left: 24px;
+  padding-right: 24px;
+  .app-button-group {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}
