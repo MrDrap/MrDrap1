@@ -1,3 +1,5 @@
+import { ACTION_SET_USER_ROLE } from "./actions";
+
 const defaultState = {
   role: 'Администратор',
   mail: 'example@mail.com',
@@ -7,6 +9,9 @@ const defaultState = {
 
 const userReducer = (state = defaultState, action) => {
   switch(action.type) {
+    case ACTION_SET_USER_ROLE: {
+      return { ...state, role: action.payload };
+    }
     default: {
       return state;
     }

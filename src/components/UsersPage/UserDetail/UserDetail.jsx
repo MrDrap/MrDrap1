@@ -1,6 +1,7 @@
 import React from 'react';
 import './UserDetail.scss';
 import {Dropdown} from "semantic-ui-react";
+import RoleBasedRender from '../../RoleBasedRender/RoleBasedRender';
 
 const ROLE_OPTIONS = [
   {
@@ -123,10 +124,12 @@ function UserDetail() {
           <input value='165501001'/>
         </div>
       </div>
-      <div className='app-button-group'>
-        <button className='primary-button'>Сохранить изменения</button>
-        <button className='secondary-button'>Отменить</button>
-      </div>
+      <RoleBasedRender requiredRoles={ ['Администратор', 'Менеджер'] } >
+        <div className='app-button-group'>
+          <button className='primary-button'>Сохранить изменения</button>
+          <button className='secondary-button'>Отменить</button>
+        </div>
+      </RoleBasedRender>
     </div>
   );
 }

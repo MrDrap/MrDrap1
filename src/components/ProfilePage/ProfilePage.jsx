@@ -2,6 +2,8 @@ import React from 'react';
 import './ProfilePage.scss'
 import {Dropdown} from "semantic-ui-react";
 
+import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
+
 const ROLE_OPTIONS = [
   {
     key: 'Клиент',
@@ -45,16 +47,18 @@ function ProfilePage() {
     <div className='page-content profile-page'>
       <h1>Профиль пользователя</h1>
       <div className='app-input-group'>
-        <div className='app-input'>
-          <label>Роль</label>
-          <Dropdown
-            placeholder='Роль'
-            fluid
-            className="small-input app-dropdown-button"
-            selection
-            options={ROLE_OPTIONS}
-          />
-        </div>
+        <RoleBasedRender requiredRoles={ ['Администратор'] } >
+          <div className='app-input'>
+            <label>Роль</label>
+            <Dropdown
+              placeholder='Роль'
+              fluid
+              className="small-input app-dropdown-button"
+              selection
+              options={ROLE_OPTIONS}
+            />
+          </div>
+          </RoleBasedRender>
         <div className='app-input wide-input'>
           <label>Фамилия, имя, отчество</label>
           <input value='Никаев Филимон Евлампиевич'/>
@@ -90,6 +94,42 @@ function ProfilePage() {
           />
         </div>
       </div>
+
+      <RoleBasedRender requiredRoles={ ['Клиент'] } >
+
+        <h2>Платёжные реквизиты</h2>
+        <div className='app-input-group'>
+          <div className='app-input wide-input'>
+            <label>Наименование плательщика</label>
+            <input value='ОАО «Сетевая компания»'/>
+          </div>
+          <div className='app-input medium-input'>
+            <label>Расчётный счёт</label>
+            <input value='40702810500000000072'/>
+          </div>
+          <div className='app-input wide-input'>
+            <label>Наименование банка</label>
+            <input value='ООО Банк «Аверс»'/>
+          </div>
+          <div className='app-input tiny-input'>
+            <label>БИК</label>
+            <input value='049205774'/>
+          </div>
+          <div className='app-input small-input'>
+            <label>Корреспондентский счет</label>
+            <input value='30101810500000000774'/>
+          </div>
+          <div className='app-input tiny-input'>
+            <label>ИНН</label>
+            <input value='1653003601'/>
+          </div>
+          <div className='app-input tiny-input'>
+            <label>КПП</label>
+            <input value='165501001'/>
+          </div>
+        </div>
+
+      </RoleBasedRender>
       
       <div className='app-button-group'>
         <button className='primary-button'>Сохранить изменения</button>
