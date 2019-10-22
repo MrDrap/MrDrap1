@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 function Table({ columns, data, onRowClick, actions = [], itemsPerPage }) {
-  const [items, setItems] = useState(data);
   const [page, setPage] = useState(1);
+  const [items, setItems] = useState(itemsPerPage ? data.slice((page - 1) * itemsPerPage , page * itemsPerPage) : data);
+  
   
   useEffect(() => {
     if (itemsPerPage) {
@@ -19,19 +20,19 @@ function Table({ columns, data, onRowClick, actions = [], itemsPerPage }) {
     if (pageCount > 6) {
       // first three pages
       for (let index = 1; index < 4; index++) {
-        pagesButtons.push(<button className={page === index ? 'page-button selected' : 'page-button'} onClick={() => setPage(index)}>{ index } </button>)
+        pagesButtons.push(<button className={page === index ? 'page-button selected' : 'page-button'} onClick={() => setPage(index)} key={ index }>{ index } </button>)
       }
       // ellipsis '...'
       pagesButtons.push(<div className="ellipsis">&#8230;</div>);
 
       // last three pages
       for (let index = pageCount - 2; index < pageCount + 1; index++) {
-        pagesButtons.push(<button className={page === index ? 'page-button selected' : 'page-button'} onClick={() => setPage(index)}>{ index } </button>)
+        pagesButtons.push(<button className={page === index ? 'page-button selected' : 'page-button'} onClick={() => setPage(index)} key={ index }>{ index } </button>)
       }
       
     } else {
       for (let index = 1; index < pageCount + 1; index++) {
-        pagesButtons.push(<button className={page === index ? 'page-button selected' : 'page-button'} onClick={() => setPage(index)}>{ index } </button>);
+        pagesButtons.push(<button className={page === index ? 'page-button selected' : 'page-button'} onClick={() => setPage(index)} key={ index }>{ index } </button>);
       }
     }
 
@@ -60,7 +61,7 @@ function Table({ columns, data, onRowClick, actions = [], itemsPerPage }) {
                             { subColumn.format ? subColumn.format(subColumn.accessor(value)): subColumn.accessor(value) } 
                           </td>
                         )
-                      : <td onClick={ onRowClick } key={ `${ index }-td` }> { columns[index].format ? columns[index].format(value): value } </td>
+                      : <td onClick={ onRowClick } key={ `${ index }-td` } style={ columns[index].styles }> { columns[index].format ? columns[index].format(value): value } </td>
           
                 })}
                 <td className="table-actions">

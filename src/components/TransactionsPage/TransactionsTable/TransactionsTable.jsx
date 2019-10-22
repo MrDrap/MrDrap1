@@ -8,7 +8,7 @@ function TransactionsTable({ transactions, onRowClick }) {
   const columns = [
     { title: 'Дата', format: date => formatDate(date) },
     { title: 'Отправитель' },
-    { title: 'Получатель' },
+    { title: 'Получатель' , styles: { maxWidth: '220px' }},
     { title: 'Сумма' },
     { title: 'Статус' }
     
