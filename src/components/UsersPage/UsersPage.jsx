@@ -1,5 +1,5 @@
 import React from 'react';
-import UsersTable from '../UsersTable/UsersTable';
+import UsersTable from './UsersTable/UsersTable';
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 
 const mockUsers = [
@@ -12,7 +12,11 @@ const mockUsers = [
 ];
 
 function UsersPage({ history, match }) {
+  // in future it is supposed to redirect to /users/:userId, where userId is the id of the user you clicked on
+  // then you could get userId by props.match.params.userId in the component for route /users/:userId (check src/routes.js)
+  // and make api call to fetch userData, or alternatively get it from redux store, if you stored all users there
   const handleRowClick = event => history.push(`${ match.path }/1`);
+  const handleDelete = event => console.log('Clicked delete');
 
   return (
     <div className="page-content">
@@ -23,7 +27,7 @@ function UsersPage({ history, match }) {
       <UsersTable 
         users={ mockUsers } 
         onRowClick={ handleRowClick } 
-        onDelete={ () => console.log('Clicked delete') }
+        onDelete={ handleDelete }
       />
     </div>
   );

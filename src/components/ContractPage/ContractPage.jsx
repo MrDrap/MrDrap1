@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContractPage.scss';
-import { setContractStatus } from '../../store/Contracts/actions';
+import { setContractStatus } from '../../store/contract/actions';
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
 import { connect } from 'react-redux';
 

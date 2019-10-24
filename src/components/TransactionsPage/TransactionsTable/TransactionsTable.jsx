@@ -19,6 +19,7 @@ function TransactionsTable({ transactions, onRowClick }) {
       columns={ columns } 
       data={ transactions } 
       onRowClick={ onRowClick }
+      selectable
     />
   );
 }

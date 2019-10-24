@@ -40,13 +40,17 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 24px !important;
     color: #000000;
     &:focus {
       outline: none;
       background-color: rgba(0, 0, 0, 0.15);
     }
   }
+}
+
+.app-input > input:disabled {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 // im not sure we need this, but i think it's ok
@@ -60,27 +64,19 @@
 }
 
 .wide-input {
-  width: 30% !important;
-  min-width: 350px !important;
-  max-width: 500px !important;
+  width: 353px !important;
 }
 
 .medium-input {
-  min-width: 250px !important;
-  max-width: 400px !important;
-  width: 22% !important;
+  width: 256px !important;
 }
 
 .small-input {
-  min-width: 150px !important;
-  max-width: 250px !important;
-  width: 14% !important;
+  width: 160px !important;
 }
 
 .tiny-input {
-  min-width: 100px !important;
-  max-width: 150px !important;
-  width: 9% !important;
+  width: 100px !important;
 }
 
 .app-dropdown-search {
@@ -94,10 +90,32 @@
   font-family: "Ubuntu Mono", monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  // color: #000000 !important;
   min-height: 32px !important;
+  min-width: 353px !important;
+
+  .menu {
+    border: none !important;
+  }
+
+  .text {
+    top: -7px !important;
+    left: 0px !important;
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    // color: #000000 !important;
+  }
+
+  .search {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
   &:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0.15);
@@ -127,7 +145,11 @@
   .dropdown.icon {
     position: unset !important;
     padding: 0 14px 0 0 !important;
+    min-height: 32px !important;
     &::before {
+      display: block;
+      line-height: 22px;
+      font-size: 22px !important;
       content: "\2304" !important;
     }
   }
@@ -147,4 +169,13 @@
       background: rgba(26, 165, 184, 0.4);
     }
   }
+}
+
+.ui.selection.dropdown.search .menu>.item {
+  padding: 0px 8px !important; 
+}
+
+.ui.disabled.fluid.search.selection.dropdown.medium-input.app-dropdown-search  {
+  opacity: 1 !important;
+  color: rgba(0, 0, 0, 0.4) !important;
 }

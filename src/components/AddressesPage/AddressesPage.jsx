@@ -18,7 +18,7 @@ function AddressesPage() {
   return (
     <div className="page-content addresses-page">
       <h1>Адреса</h1>
-      <p className="regular-text">Чтобы добавить пользователю адрес, нужно сперва занести этот адрес в таблицу ниже (переписать)</p>
+      <p className="regular-text">Чтобы добавить пользователю адрес, нужно сперва занести этот адрес в таблицу ниже</p>
       <button className="primary-button" type="button" onClick={() => childRef.current.showModal()}>Добавить</button>
       <AddressesTable
         addresses={ mockAddresses }

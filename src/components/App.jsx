@@ -4,8 +4,8 @@ import Header from './Header/header';
 import './App.scss';
 import routes from './../routes';
 import '../styles/main.scss'
-// import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../node_modules/react-bootstrap-modal/lib/css/rbm-complete.css';
+
 function App() {
   return (
     <div className="App">

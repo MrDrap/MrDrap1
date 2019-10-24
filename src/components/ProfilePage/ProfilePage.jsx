@@ -3,6 +3,7 @@ import './ProfilePage.scss'
 import {Dropdown} from "semantic-ui-react";
 
 import RoleBasedRender from '../RoleBasedRender/RoleBasedRender';
+import {Link} from "react-router-dom";
 
 const ROLE_OPTIONS = [
   {
@@ -45,35 +46,47 @@ const ADDRESS_OPTIONS = [
 function ProfilePage() {
   return (
     <div className='page-content profile-page'>
-      <h1>Профиль пользователя</h1>
+      <h1>Мой профиль</h1>
       <div className='app-input-group'>
         <RoleBasedRender requiredRoles={ ['Администратор'] } >
-          <div className='app-input'>
-            <label>Роль</label>
-            <Dropdown
-              placeholder='Роль'
-              fluid
-              className="small-input app-dropdown-button"
-              selection
-              options={ROLE_OPTIONS}
-            />
+          <div className="input-with-help-text">
+            <div className='app-input role-select'>
+              <label>Роль</label>
+              <Dropdown
+                placeholder='Роль'
+                fluid
+                className="small-input app-dropdown-button"
+                selection
+                options={ROLE_OPTIONS}
+              />
+            </div>
+            <div className="help-text with-margin">
+              Поменяете свою роль — не сможете больше управлять системой ¯\_(ツ)_/¯
+            </div>
           </div>
           </RoleBasedRender>
         <div className='app-input wide-input'>
           <label>Фамилия, имя, отчество</label>
           <input value='Никаев Филимон Евлампиевич'/>
         </div>
-        <div className='app-input wide-input'>
-          <label>Блокчейновый адрес</label>
-          <Dropdown
-            placeholder='Блокчейновый адрес'
-            search
-            fluid
-            className="medium-input app-dropdown-search"
-            selection
-            options={ADDRESS_OPTIONS}
-          />
-          <button className='secondary-button small-button'>Посмотреть на Эзерскане</button>
+        <div className="input-with-help-text">
+          <div className='app-input wide-input'>
+            <label>Блокчейновый адрес</label>
+            <Dropdown
+              placeholder='Блокчейновый адрес'
+              search
+              fluid
+              className="medium-input app-dropdown-search"
+              selection
+              options={ADDRESS_OPTIONS}
+            />
+            <button className='secondary-button small-button'>Посмотреть на Эзерскане</button>
+          </div>
+          <RoleBasedRender requiredRoles={ ['Администратор', 'Менеджер', 'Клиент'] } >
+            <div className="help-text regular-text">
+              Адрес сперва надо добавить в <Link className="blue-text" to='/addresses'>список</Link>
+            </div>
+          </RoleBasedRender>
         </div>
         <div className='app-input medium-input'>
           <label>Электронная почта</label>
@@ -88,7 +101,7 @@ function ProfilePage() {
           <Dropdown
             placeholder='Часовой пояс'
             fluid
-            className="small-input app-dropdown-button"
+            className="time-input app-dropdown-button"
             selection
             options={TIMEZONE_OPTIONS}
           />

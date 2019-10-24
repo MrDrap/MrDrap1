@@ -1,6 +1,7 @@
 import React from 'react';
 import JournalTable from './JournalTable/JournalTable';
 import { Dropdown } from 'semantic-ui-react';
+import './JournalTable/JournalTable.scss';
 
 const mockJournalData = [
   { 
@@ -426,7 +427,7 @@ function JournalPage() {
       <Dropdown
           defaultValue='1 января 2019 - 1 сентября 2019'
           fluid
-          className="app-dropdown-button medium-input"
+          className="app-dropdown-button journal-dropdown"
           selection
           options={ dateFilterOptions }
       />
