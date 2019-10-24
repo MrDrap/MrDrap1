@@ -81,7 +81,7 @@ function Header({ userRole, setUserRole, contractStatus }) {
               <NavLink className="link linkBorder" to=''>mail@mail.mail <span className="caret"></span></NavLink>
               <div>
                 <ul>
-                  <li><NavLink className="link linkBorder" to="/profile">Выйти из системы</NavLink></li>
+                  <li><NavLink className="link" to="/profile">Выйти из системы</NavLink></li>
                 </ul>
               </div>
             </li>
