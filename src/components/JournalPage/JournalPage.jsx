@@ -427,6 +427,7 @@ function JournalPage() {
       <Dropdown
           defaultValue='1 января 2019 - 1 сентября 2019'
           fluid
+          icon='chevron down'
           className="app-dropdown-button journal-dropdown"
           selection
           options={ dateFilterOptions }

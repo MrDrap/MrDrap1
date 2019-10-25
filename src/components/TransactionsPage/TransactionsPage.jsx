@@ -59,6 +59,7 @@ function TransactionsPage({ userRole }) {
           fluid
           className="app-dropdown-button date-range-selector"
           selection
+          icon='chevron down'
           options={ dateFilterOptions }
         />
         <button className="secondary-button borderless show-all-button" onClick={ handleShowAll }>Показать за всё время</button>

@@ -83,6 +83,7 @@ function UserProfile({ user, onSubmit, title, currentUserRole }) {
                   fluid
                   className="small-input app-dropdown-button"
                   selection
+                  icon='chevron down'
                   options={ ROLE_OPTIONS }
                 />
               </div>
@@ -134,6 +135,7 @@ function UserProfile({ user, onSubmit, title, currentUserRole }) {
               fluid
               className="time-input app-dropdown-button"
               selection
+              icon='angle down'
               options={ TIMEZONE_OPTIONS }
               disabled={ shouldDisable }
             />

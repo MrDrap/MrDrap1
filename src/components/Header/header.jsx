@@ -46,6 +46,7 @@ function Header({ userRole, setUserRole, contractStatus }) {
           fluid
           className="small-input app-dropdown-button"
           selection
+          icon='chevron down'
           onChange={ handleRoleChange }
           options={ROLE_OPTIONS}
       />
