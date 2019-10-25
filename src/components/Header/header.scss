@@ -87,6 +87,9 @@ nav > ul > li > a {
   display: block;
   padding: 0 24px;
   text-decoration: none !important;
+  @media screen and (max-width: 1300px){
+    padding: 0 10px;
+  }
 }
       
 nav > div > ul > li > div {
