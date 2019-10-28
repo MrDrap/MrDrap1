@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "93a54bbce863e803f4ce877a9b80bd27",
+    "revision": "f86b246c30f6e3ba848e443f251d5c95",
     "url": "/MrDrap1/index.html"
   },
   {
-    "revision": "f61a2fcd6a4967c02431",
+    "revision": "a655c564ac77ea4d2044",
     "url": "/MrDrap1/static/css/2.46cdc163.chunk.css"
   },
   {
-    "revision": "ef16792ffdad7c5777d0",
-    "url": "/MrDrap1/static/css/main.a6f52e33.chunk.css"
+    "revision": "cc5895a50adcf3923d31",
+    "url": "/MrDrap1/static/css/main.f8748854.chunk.css"
   },
   {
-    "revision": "f61a2fcd6a4967c02431",
-    "url": "/MrDrap1/static/js/2.8571fd9c.chunk.js"
+    "revision": "a655c564ac77ea4d2044",
+    "url": "/MrDrap1/static/js/2.29e5176a.chunk.js"
   },
   {
-    "revision": "ef16792ffdad7c5777d0",
-    "url": "/MrDrap1/static/js/main.91737a49.chunk.js"
+    "revision": "cc5895a50adcf3923d31",
+    "url": "/MrDrap1/static/js/main.38a0b21c.chunk.js"
   },
   {
     "revision": "8383996872f5532588dc",
