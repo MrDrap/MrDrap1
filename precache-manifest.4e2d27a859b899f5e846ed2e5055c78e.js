@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f86b246c30f6e3ba848e443f251d5c95",
+    "revision": "67965f65ff5d881f36ad3ff2abb07cdc",
     "url": "/MrDrap1/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MrDrap1/static/css/2.46cdc163.chunk.css"
   },
   {
-    "revision": "cc5895a50adcf3923d31",
+    "revision": "15fb653abfdedf7ea360",
     "url": "/MrDrap1/static/css/main.f8748854.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MrDrap1/static/js/2.29e5176a.chunk.js"
   },
   {
-    "revision": "cc5895a50adcf3923d31",
-    "url": "/MrDrap1/static/js/main.38a0b21c.chunk.js"
+    "revision": "15fb653abfdedf7ea360",
+    "url": "/MrDrap1/static/js/main.45742aed.chunk.js"
   },
   {
     "revision": "8383996872f5532588dc",
